@@ -3,6 +3,8 @@ body:has(.loginForm){
 }
 
 .loginForm{
+    min-width: 300px;
+    min-height: 400px;
     position: absolute;
     background: darkseagreen;
     bottom:50%;

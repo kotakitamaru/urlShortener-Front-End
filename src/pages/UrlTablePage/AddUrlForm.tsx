@@ -38,6 +38,8 @@ function AddUrlForm(props:Attributes){
                     return;
                 }
                 props.addUrl(response);
+                if(urlInputRef.current)
+                    urlInputRef.current.value = "";
             },(error) => {
                 console.log(error);
             })
