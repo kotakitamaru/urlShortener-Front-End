@@ -21,7 +21,7 @@ function AddUrlForm(props:Attributes){
         }
         if(!username || !token || !urlInputRef.current.value)
             return;
-        fetch("https://localhost:44390/ShortUrl",
+        fetch("https://shrturl.azurewebsites.net/ShortUrl",
             {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json',

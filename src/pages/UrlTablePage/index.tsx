@@ -7,7 +7,7 @@ function UrlTablePage() {
     const [urlList,setUrlList] = useState(Array<UrlInfo>);
     const username = useUsername();
     useEffect(() =>{
-        fetch("https://localhost:44390/ShortUrl",{
+        fetch("https://shrturl.azurewebsites.net/ShortUrl",{
             method: "GET"
         }).then(res => res.json())
             .then(response=>{

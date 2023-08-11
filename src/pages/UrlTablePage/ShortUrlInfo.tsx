@@ -16,7 +16,7 @@ function ShortUrlInfo(params:Attributes){
     const isAdmin = useIsAdmin();
 
     useEffect(()=>{
-        fetch("https://localhost:44390/ShortUrl/fullLink/" + params.shortUrlForInfo,{
+        fetch("https://shrturl.azurewebsites.net/ShortUrl/fullLink/" + params.shortUrlForInfo,{
             method:"GET"
         }).then(res => res.json())
             .then(responce => {
@@ -27,7 +27,7 @@ function ShortUrlInfo(params:Attributes){
     },[])
 
     function deleteUrl(){
-        fetch("https://localhost:44390/ShortUrl/" + params.shortUrlForInfo,{
+        fetch("https://shrturl.azurewebsites.net/ShortUrl/" + params.shortUrlForInfo,{
             method: "Delete",
             headers: {
                 Authorization: "Bearer " + token

@@ -19,7 +19,7 @@ function LoginPage(){
             return;
         }
 
-        fetch("https://localhost:44390/Auth/login",{
+        fetch("https://shrturl.azurewebsites.net/Auth/login",{
             method:"POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(
@@ -49,7 +49,7 @@ function LoginPage(){
             <span>Url Shortener</span>
             <div className="inputs">
                 <label htmlFor="login">Login</label>
-                <input id="login" onChange={(e)=>setUsername(e.target.value)}
+                <input id="login" maxLength={10} onChange={(e)=>setUsername(e.target.value)}
                    value={username} type="text"/>
                 <label htmlFor="password">Password</label>
                 <input id="password" onChange={(e)=>setPassword(e.target.value)}

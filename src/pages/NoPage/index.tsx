@@ -6,7 +6,7 @@ function NoPage(){
     const [message, setMessage] = useState("");
     const {link} = useParams();
     useEffect(()=>{
-        fetch("https://localhost:44390/ShortUrl/fullLink/" + link,{
+        fetch("https://shrturl.azurewebsites.net/ShortUrl/fullLink/" + link,{
             method:"GET"
         }).then(res => {
             if(res.status === 200) {

@@ -8,7 +8,7 @@ function AboutPage(){
     const token = useToken();
 
     useEffect(()=>{
-        fetch("https://localhost:44390/About",{
+        fetch("https://shrturl.azurewebsites.net/About",{
             method: "GET"
         }).then(res => res.text())
             .then(response => {
@@ -17,7 +17,7 @@ function AboutPage(){
     },[])
 
     function saveAboutText(){
-        fetch("https://localhost:44390/About",{
+        fetch("https://shrturl.azurewebsites.net/About",{
             method: "POST",
             body: JSON.stringify({
                 aboutText: aboutText
