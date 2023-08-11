@@ -5,6 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import PaginationButton from "./PaginationButtons";
 import ShortUrlInfo from "./ShortUrlInfo";
 import shortUrlInfo from "./ShortUrlInfo";
+import {useUsername} from "../../contexts/authProvider";
 
 interface Attributes{
     urlList:Array<UrlInfo>,
@@ -13,6 +14,7 @@ interface Attributes{
 function URLTable(props:Attributes)
 {
     const {page} = useParams();
+    const username = useUsername();
     const [urlForInfo, setUrlForInfo] = useState<string>("");
     const [isOpenUrlInfo, setIsOpenUrlInfo] = useState<boolean>(false);
     const elementsPerPage:number = 7;
@@ -24,6 +26,11 @@ function URLTable(props:Attributes)
 
     function openInfo(shortUrl:string)
     {
+        if(!username)
+        {
+            alert("You have to log in to access this information");
+            return;
+        }
         setUrlForInfo(shortUrl);
         setIsOpenUrlInfo(true);
     }

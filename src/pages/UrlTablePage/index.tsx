@@ -11,11 +11,11 @@ function UrlTablePage() {
             method: "GET"
         }).then(res => res.json())
             .then(response=>{
-                setUrlList(response);
+                setUrlList(response.reverse());
             })
     }, [])
     function addUrl(url: UrlInfo){
-        setUrlList([...urlList,url]);
+        setUrlList([url,...urlList]);
     }
 
     function deleteUrl(shortUrl: string){
