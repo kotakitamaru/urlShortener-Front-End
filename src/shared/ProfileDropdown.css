@@ -1,0 +1,49 @@
+.profile{
+    transition: background 0.5s;
+    width: 90px;
+    display: flex;
+    height: 50px;
+    text-align: end;
+    margin:0;
+    padding:0;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    font-size: large;
+}
+
+.dropdown:hover .profile{
+    background: #567e56;
+}
+
+.dropdown{
+    transition: 1s;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: 100%;
+    z-index: 9;
+}
+
+.dropdownContent{
+    transition: 1s;
+    background: white;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdownContent{
+    display: block;
+}
+
+.dropdownContent .dropdownLink{
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdownContent .dropdownLink:hover{
+    background: azure;
+}

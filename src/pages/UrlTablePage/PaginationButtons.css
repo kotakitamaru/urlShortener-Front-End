@@ -1,0 +1,27 @@
+.pageButton{
+    transition: 300ms;
+    margin: 5px;
+    border-radius: 25%;
+    background: darkseagreen;
+    width: 25px;
+    height: 25px;
+    border: none;
+    color:white;
+}
+
+.dots{
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: #567e56;
+    background: transparent;
+}
+
+.pageButton:hover{
+    background: #3a653a;
+    cursor: pointer;
+}
+
+.current{
+    background: #567e56;
+}

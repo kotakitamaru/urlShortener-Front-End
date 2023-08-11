@@ -1,0 +1,87 @@
+body:has(.tableContainer){
+    background: #cfdecf;
+}
+
+.tableContainer{
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translateY(50%) translateX(50%);
+    width: 60vw;
+    height: 70vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+.tableContainer td{
+    border: #2b502b solid 1px;
+    color: #4e5e4e;
+}
+
+.tableContainer tbody tr{
+    background: #e0e8e0;
+}
+
+.tableContainer th{
+    padding-bottom: 10px;
+    color: #394d39;
+}
+
+.tableContainer table{
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.linkCell{
+    width: 90%;
+    height: 90%;
+    background: transparent;
+    overflow: auto;
+    word-break: break-word;
+    margin: 15px;
+    display: flex;
+}
+
+.url{
+    font-size: 100%;
+    text-decoration: none;
+    color: #394d39;
+    margin: auto;
+}
+
+.url:hover{
+    text-decoration: underline;
+}
+
+.linkCell:hover::-webkit-scrollbar-thumb{
+    background: black;
+}
+.linkCell::-webkit-scrollbar {
+    width: 3px;
+}
+.linkCell::-webkit-scrollbar-button{
+    display: none;
+}
+
+.linkCell::-webkit-scrollbar-thumb {
+
+    background: transparent;
+    border-radius: 10px;
+}
+
+.linkCell::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.tableContainer tbody tr{
+    transition: 0.5s;
+}
+
+.tableContainer tbody tr:hover{
+    cursor: pointer;
+    background: #d4ded4;
+}

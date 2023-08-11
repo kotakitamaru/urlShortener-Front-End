@@ -1,0 +1,75 @@
+.mainText{
+    transition: background 1s;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(123,178,123);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.label{
+    text-align: center;
+    font-size: 100px;
+    width: fit-content;
+    color: #e9f3e9;
+    transform: translateY(-30%);
+    animation: 1s ease-out 0s 1 textAppearing;
+}
+
+@keyframes textAppearing {
+    0%{
+        font-size: 1px;
+    }
+    100%{
+        font-size: 100px;
+    }
+}
+
+@keyframes linksAppearing {
+    0%{
+        color: transparent;
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        color: #e9f3e9;
+    }
+}
+
+
+
+.linksContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform:translateY(-150%);
+}
+
+.link{
+    transition: 1s;
+    margin: 10px;
+    color: #e9f3e9;
+    text-decoration: none;
+    animation: 2s ease-out 0s 1 linksAppearing;
+}
+
+.linksContainer:first-child:hover{
+    transform: translateX(10%);
+}
+
+.link:hover{
+    text-decoration: underline;
+    font-size: large;
+    transform:translateY(40%);
+}
+
+.mainText:has(.label:hover){
+    background: #091109;
+}
+.mainText:has(.linksContainer:hover, .dropdown:hover){
+    background: #112311;
+}

@@ -1,0 +1,38 @@
+body:has(.aboutContainer){
+    background: rgba(123,178,123);
+
+}
+.title{
+    font-size: 100px;
+    margin-top: 5%;
+}
+.underTitle{
+    font-size: x-large;
+}
+
+.aboutContainer{
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e9f3e9;
+}
+
+.aboutText{
+    margin: 25px 25px 25px 25px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #c1e2c1;
+    border: none;
+    color: #2b502b;
+    width: 50vw;
+    height: 30vh;
+    resize: none;
+}
+
+.aboutText:focus{
+    background: #afccaf;
+    outline: none;
+}

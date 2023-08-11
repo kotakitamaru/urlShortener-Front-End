@@ -1,0 +1,116 @@
+.overlayInfo{
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.overlayInfo a{
+    text-decoration: none;
+    color: #394d39;
+}
+.overlayInfo a:hover{
+    text-decoration: underline;
+}
+
+.urlInfoModal{
+    min-height: 345px;
+    height: fit-content;
+    width: 50vh;
+    background: #c1e2c1;
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    transform: translateY(25%) translateX(50%);
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    color: #112311;
+    animation: 1s ease-out 0s urlInfoModalAppearing;
+}
+
+.urlInfoModal h1{
+    text-align: center;
+}
+
+.infoBlock{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.infoContainer{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.urlContainer{
+    font-size: large;
+    height: 50px;
+    overflow: auto;
+    word-break: break-word;
+    transition: 1s;
+}
+
+.urlContainer:hover::-webkit-scrollbar-thumb{
+    background: black;
+}
+.urlContainer::-webkit-scrollbar {
+    width: 3px;
+}
+.urlContainer::-webkit-scrollbar-button{
+    display: none;
+}
+
+.urlContainer::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.urlContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.deleteButton, .closeButton{
+    border-radius: 5px;
+    background: darkseagreen;
+    color: azure;
+    border: none;
+    transition: 300ms;
+}
+
+.deleteButton{
+    width: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.deleteButton:hover, .closeButton:hover{
+    cursor: pointer;
+    background: #3a653a;
+}
+
+.closeButton{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+@keyframes urlInfoModalAppearing {
+    0%{
+        transform: translateY(25%) translateX(50%) scale(0%);
+    }
+    100%{
+        transform: translateY(25%) translateX(50%) scale(100%);
+    }
+}

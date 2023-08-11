@@ -1,0 +1,36 @@
+.addUrlForm{
+    width: 100vw;
+    text-align: center;
+    margin: 5px 0;
+}
+.addUrlForm input{
+    width: 40vw;
+    height: 3vh;
+    margin: 5px 10px;
+    background: #e9f3e9;
+    color: #112311;
+    font-family: monospace;
+    border:none;
+    border-radius: 3px;
+    font-size: medium;
+}
+
+.addUrlForm input:focus{
+    outline: #112311 solid 1px;
+}
+
+.addUrlForm button{
+    transition: 300ms;
+    margin: 5px;
+    border-radius: 5px;
+    background: darkseagreen;
+    border: none;
+    color:white;
+    height: 25px;
+    width: 125px;
+}
+
+.addUrlForm button:hover{
+    background: #3a653a;
+    cursor: pointer;
+}
